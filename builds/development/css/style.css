@@ -155,6 +155,8 @@ h3{
 }
 
 p {
+  
+  color:#ceae2c;
 }
 
 a.small {
@@ -223,7 +225,7 @@ p.error {
     cursor: pointer;
     border: 1px solid transparent;
     border-radius: 4px;
-    background: #C61C6F;
+    background: #ceae2c;
     color: #FCF4DC;
     background-color: #14566A;
     background-size: 18px 18px;
@@ -458,7 +460,7 @@ nav .table {
 nav li.branding a {
   font-size: 1.5em;
   text-align: left;
-  background: #202F37;
+  background: #ceae2c;
   clear:left;
  margin-left: -500px;
 }
@@ -467,6 +469,7 @@ nav li.branding a span{
 
   font-size: 15px;
   font-family: palatino;
+
 }
 
 nav ul {
@@ -476,7 +479,7 @@ nav ul {
 
 nav ul li {
   float: left;
-  color: #145266;
+  color: #ffffff;
   font-family: Bree Serif, serif;
 }
 
@@ -495,11 +498,12 @@ nav ul li a {
   float: left;
   text-decoration: none;
   padding: 10px 15px;
+
 }
 
 nav ul li a:hover {
-  background-color: yellow;
-  color: black;
+  background-color: ;
+  color: #ceae2c;
 }
 
 .userinfo {
