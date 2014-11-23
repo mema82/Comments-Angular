@@ -1,10 +1,10 @@
 <section class="meetings cf">
 
-<h1>Add Meetings</h1>
+<h1>Add Comments</h1>
 
-<form class="formgroup addmeeting cf" name="myform" ng-submit="addMeeting()" novalidate><!--WILL CREATE THIS 'ADDMEETING'METHOD LATER inside meeetings js file-->
+<form class="formgroup addmeeting cf" name="myform" ng-submit="addMeeting()" ><!--WILL CREATE THIS 'ADDMEETING'METHOD LATER inside meeetings js file-->
  <div class="inputwrapper">
- 	<input type="text" name="meetingname" placeholder="meeting name" ng-model="meetingname" ng-required="true">
+ 	<input type="text" name="meetingname" placeholder="comment here" ng-model="meetingname" ng-required="true">
 
  	<button type="submit" class="btn"
 ng-disabled="myform.$invalid">+</button>
@@ -12,8 +12,8 @@ ng-disabled="myform.$invalid">+</button>
 
 
 
-  <h2>Your Meetings</h2>
+
   <div class="meeting" ng-repeat="meeting in meetings">
-    <p>{{meeting.name}}</p>
+    <p>{{meeting.name | limitTo:140 }}</p>
   </div>
 </section>

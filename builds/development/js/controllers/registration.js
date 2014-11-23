@@ -14,12 +14,17 @@ myApp.controller('RegistrationController',
 
   	$location.path('/meetings');
 
+  	}, functions(error) {
+
+  		$scope.messege = error.toString();
   	});
 
-  } //login
+  //login
 
   $scope.register = function() {
     $location.path('/meetings');
   } //login
 
 }); //RegistrationController
+
+
