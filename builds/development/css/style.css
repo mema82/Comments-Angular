@@ -156,7 +156,7 @@ h3{
 
 p {
   
-  color:#ceae2c;
+  color:#ffffff;
 }
 
 a.small {
@@ -208,6 +208,8 @@ p.error {
 /*buttons*/
 .ng-invalid .btn {
   background: gray;
+  float:right;
+  margin-top: -39px;
 }
 
 /* Buttons */
@@ -531,7 +533,7 @@ nav ul li a:hover {
 
 .addmeeting .inputwrapper input {
     float: left;
-    width: 100%;
+    width: 105%;
 }
 
 .addmeeting button {
@@ -549,12 +551,12 @@ nav ul li a:hover {
 }
 
 .meetings .meeting {
-  display: inline-block;
-  background: #E5DEC8;
+  display: block;
+  background: #202F37;
   padding: 5px 20px 8px 15px;
   margin: 3px 10px;
-  border-radius: 10px;
-  border: 2px solid white;
+  border-radius: 5px;
+  border: 1px solid #ffffff;
 }
 
 .meetings .meeting .btn {
