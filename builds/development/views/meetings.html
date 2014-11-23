@@ -4,16 +4,20 @@
 
 <form class="formgroup addmeeting cf" name="myform" ng-submit="addMeeting()" ><!--WILL CREATE THIS 'ADDMEETING'METHOD LATER inside meeetings js file-->
  <div class="inputwrapper">
- 	<input type="text" name="meetingname" placeholder="comment here" ng-model="meetingname" ng-required="true">
+ 	<input type="text" name="meetingname" placeholder="comment here" ng-model="meetingname" ng-required="true"></div>
 
  	<button type="submit" class="btn"
 ng-disabled="myform.$invalid">+</button>
 	</form>
 
 
-
-
   <div class="meeting" ng-repeat="meeting in meetings">
-    <p>{{meeting.name | limitTo:140 }}</p>
-  </div>
+    <p>{{meeting.name | limitTo:140 }}</p><br>
+  </div> 
+
+
+<div ng-controller = "MeetingsController">
+	<h3>{{today | date: 'medium'}}</h3>
+
+
 </section>

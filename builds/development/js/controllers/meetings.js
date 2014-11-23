@@ -17,9 +17,16 @@ $scope.addMeeting=function(){
 		date: Firebase.ServerValue.TIMESTAMP
 	}).then (function(){
 
-		$scope.meetingname='';
+		$scope.meetingname='',
+		$scope.today = new Date();
 
 	});
 }//ADD MEETING
 
 }); //MeetingsController
+
+//Adding Date controller
+
+
+
+
