@@ -7,17 +7,15 @@
  	<input type="text" name="meetingname" placeholder="comment here" ng-model="meetingname" ng-required="true"></div>
 
  	<button type="submit" class="btn"
-ng-disabled="myform.$invalid">+</button>
+		ng-disabled="myform.$invalid">+</button>
 	</form>
-
 
   <div class="meeting" ng-repeat="meeting in meetings">
     <p>{{meeting.name | limitTo:140 }}</p><br>
+    <h3>{{today | date: 'medium'}}</h3>
   </div> 
 
 
-<div ng-controller = "MeetingsController">
-	<h3>{{today | date: 'medium'}}</h3>
-
-
+<!--<div ng-controller = "MeetingsController">-->
+	
 </section>

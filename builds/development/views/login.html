@@ -6,7 +6,7 @@
     <h1>Let's Start Something</h1>
     <p>Log-in to request collaboration and feedback</p>
 
-    <!--<p class="error formerror" ng-show="messege">{{ messege }}</p>-->
+  <p class="error formerror" ng-show="messege">{{messege}}</p>
 
     <input type="email" name="email" placeholder="Email"
       ng-model="user.email" ng-required="true">
@@ -22,6 +22,6 @@
 
     <button type="submit" class="btn"
       ng-disabled="myform.$invalid">Login</button>
-    <p>or <a href="#/register">register</a></p>
+    <p>or<a href="#/register">register</a></p>
   </form>
 </section>

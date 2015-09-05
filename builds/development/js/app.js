@@ -1,5 +1,7 @@
+
 var myApp = angular.module('goldenstrawberries', 
-  ['ngRoute', 'firebase', 'appControllers']);
+  ['ngRoute', 'firebase', 'appControllers'])
+.constant('FIREBASE_URL', 'https://goldenstrawberries.firebaseio.com');
 
 var appControllers = angular.module('appControllers', ['firebase']);
 
@@ -17,7 +19,15 @@ myApp.config(['$routeProvider', function($routeProvider) {
       templateUrl: 'views/meetings.html',
       controller:  'MeetingsController'
     }).
+    when('/checkins/:uId/:mId', {
+      templateUrl: 'views/checkins.html',
+      controller:  'CheckInsController'
+    }).
+    when('/checkins/:uId/:mId/checkinsList', {
+      templateUrl: 'views/checkinslist.html',
+      controller:  'CheckInsController'
+    }).
     otherwise({
-      redirectTo: '/login'
+      redirectTo: '/meetings'
     });
 }]);

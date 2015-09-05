@@ -1,30 +1,23 @@
 myApp.controller('RegistrationController', 
-  function($scope, $firebaseSimpleLogin, $location) {
-
-  	var ref = new Firebase('https://goldenstrawberries.firebaseio.com/');
-    var simpleLogin = $firebaseSimpleLogin(ref);
-
+  function($scope, $firebaseSimpleLogin, $location, Authentication) {
+  
   $scope.login = function() {
-
-  	simpleLogin.$login('password', {
-
-  		email: $scope.user.email,
-  		password: $scope.user.password
-  	}).then (function(user){
-
-  	$location.path('/meetings');
-
-  	}, functions(error) {
-
-  		$scope.messege = error.toString();
-  	});
-
-  //login
+    Authentication.login($scope.user)
+      .then(function(user) {
+      $location.path('/meetings');
+    }, function(error) {
+      $scope.message = error.toString();
+    });
+  } //login
 
   $scope.register = function() {
-    $location.path('/meetings');
+    Authentication.register($scope.user)
+      .then(function(user) {
+      Authentication.login($scope.user);
+      $location.path('/meetings');
+    }, function(error) {
+      $scope.message = error.toString();
+    });
   } //login
 
 }); //RegistrationController
-
-
